@@ -4,7 +4,6 @@ RUN 	apt -y update -qq && \
 	apt -y install sudo && \
 	sudo apt -y install curl && \
 	sudo apt -y install openjdk-8-jdk && \
-	sudo apt -y install openjdk-8-jdk && \
 	sudo apt -y install software-properties-common && \
 	sudo add-apt-repository -y ppa:deadsnakes/ppa && \
 	sudo apt -y install python3.7 && \
