@@ -9,4 +9,12 @@ docker build -t spark .
 To run:
 docker run -it --restart=always -p 2020:8080 --name spark spark-docker bash
 
-If the build fail at spark download, pick a different mirror from here and add that in the Dockerfile https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
+or
+
+sudo docker run -d --restart=always -p 3030:8080 -p 3090:8090 -v /path/dev/spark_workspace:/app/dev --name spark-local spark bash -c "jupyter notebook --ip=0.0.0.0 --port=8090 --allow-root"
+
+in detach mode to start a jupyter server to do the experiments
+
+
+
+If the build fail at spark download, pick a different mirror from here and add that in the Dockerfile https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz. Make sure to change tgz expand command to point to the correct file if the mirror is modified.
