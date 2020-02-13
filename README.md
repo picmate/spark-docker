@@ -8,3 +8,5 @@ docker build -t spark .
 
 To run:
 docker run -it --restart=always -p 2020:8080 --name spark spark-docker bash
+
+If the build fail at spark download, pick a different mirror from here and add that in the Dockerfile https://www.apache.org/dyn/closer.lua/spark/spark-2.4.5/spark-2.4.5-bin-hadoop2.7.tgz
