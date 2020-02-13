@@ -17,7 +17,9 @@ RUN	curl -O "http://mirror.cc.columbia.edu/pub/software/apache/spark/spark-2.4.4
 
 RUN	echo "export SPARK_HOME=/opt/spark" >> ~/.bashrc && \
 	echo "export PATH=\$PATH:\$SPARK_HOME/bin:\$SPARK_HOME/sbin" >> ~/.bashrc && \
-	echo "export PYSPARK_PYTHON=python3" >> ~/.bashrc 
+	echo "export PYSPARK_PYTHON=python3" >> ~/.bashrc
+	
+RUN	pip3 install jupyter	
 
 EXPOSE	80
 EXPOSE	8080
